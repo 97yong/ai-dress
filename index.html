@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Try-On</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+</head>
+<body>
+  <header>
+    <h1>Virtual Try-On</h1>
+    <p>Upload your image, select clothes, and see the results!</p>
+  </header>
+
+  <main>
+    <div class="upload-container">
+      <!-- 사용자 이미지 -->
+      <div class="upload-box">
+        <h2>사용자 이미지</h2>
+        <div id="userImageDrop" class="drop-area">
+          드래그하거나 클릭하여 이미지를 업로드하세요
+        </div>
+        <input type="file" id="userImageInput" accept="image/*" hidden>
+      </div>
+
+      <!-- 옷 이미지 -->
+      <div class="upload-box">
+        <h2>옷 이미지</h2>
+        <div id="clothImageDrop" class="drop-area">
+          드래그하거나 클릭하여 이미지를 업로드하세요
+        </div>
+        <input type="file" id="clothImageInput" accept="image/*" hidden>
+      </div>
+
+      <!-- 결과 -->
+      <div class="upload-box">
+        <h2>결과</h2>
+        <div id="result" class="drop-area">
+          여기에 결과가 표시됩니다
+        </div>
+      </div>
+    </div>
+
+    <!-- 실행 버튼 -->
+    <button id="runButton" class="run-button">Run</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Virtual Try-On. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
